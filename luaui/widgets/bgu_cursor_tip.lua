@@ -72,7 +72,8 @@ local function getTooltip()
         tipType = 'prospector'
         return WG.Prospector.tooltip
     else
-        tipType, ID = spTraceScreenRay(spGetMouseState())
+        local mx, my = spGetMouseState()
+        tipType, ID = spTraceScreenRay(mx,my)
         
         if tipType == 'unit' and #Spring.GetSelectedUnits()==0 then
             return unitTooltip --sInfo shows 'tooltips' for units (and features)

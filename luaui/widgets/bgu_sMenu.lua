@@ -305,7 +305,7 @@ local function FinalizeOrderGrid()
 
     local availableButtonsPerRow = math.floor(availableWidth / WG.UIcoords.orderMenuButton.w)
     availableButtonsPerRow = math.floor(availableButtonsPerRow/8)*8 -- round down to the nearest 8
-    availableButtonsPerRow = math.max(availableButtonsPerRow, 1) -- in case user has the worlds smallest screen
+    availableButtonsPerRow = math.max(availableButtonsPerRow, 8) -- in case user has the worlds smallest screen be aggressive and render at least 8
     local neededRows = math.ceil(24 / availableButtonsPerRow)
 
     orderRows = math.max(orderRows, neededRows)
@@ -314,13 +314,25 @@ local function FinalizeOrderGrid()
     -- now set the order menu layout to match the number of rows we actually use
     -- merge downwards, collect in bottom row
     orderMenuLayout = {}
-    local rowOffset = #defaultOrderMenuLayout - orderRows
+    local rowOffset = #defaultOrderMenuLayout - orderRows    
+    
+--    Spring.Echo("WG.UIcoords.orderMenuButton.w="..WG.UIcoords.orderMenuButton.w ..
+--      "availableWidth="..availableWidth..
+--      "availableButtonsPerRow="..availableButtonsPerRow..
+--      "neededRows="..neededRows..
+--      "orderRows="..orderRows..
+--      "orderCols="..orderCols..
+--      "rowOffset="..rowOffset
+--      )
     for i=1,#defaultOrderMenuLayout do
         orderMenuLayout[i] = {}
+--        Spring.Echo("orderMenuLayout "..#orderMenuLayout) 
     end
     for i=1,#defaultOrderMenuLayout do
         for j=1,#defaultOrderMenuLayout[i] do
             local row = math.min(#orderMenuLayout, i+rowOffset)
+            
+--          Spring.Echo("orderMenuLayout "..#orderMenuLayout .. "row:"..row ) 
             table.insert(orderMenuLayout[row], defaultOrderMenuLayout[i][j])
         end
     end

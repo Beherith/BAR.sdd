@@ -9,7 +9,7 @@ function gadget:GetInfo()
       enabled = true,
    }
 end
-bail --104fix
+bail --104fix as AI causes Luarules to never load
 -- globals
 ShardSpringLua = true -- this is the AI Boot gadget, so we're in Spring Lua
 VFS.Include("luarules/gadgets/ai/preload/globals.lua")
