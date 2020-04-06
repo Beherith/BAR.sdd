@@ -3,7 +3,7 @@
 -----------------------------------------------------------------------------------------------------------------
 
 --// only works with >=77b1
-if (Game.version=="0.76b1") then
+if ((Engine and Engine.version)=="0.76b1") then
 	return false
 end
 

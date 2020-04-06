@@ -91,6 +91,7 @@ return {
 				seqnamereclamate = "TREE1RECLAMATE",
 				world = "All Worlds",
 				customparams = {
+			techlevel = 2,
 					faction = "core",
 				},
 			},

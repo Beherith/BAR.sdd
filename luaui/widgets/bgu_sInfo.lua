@@ -998,7 +998,7 @@ local function updateGroundInfo()
     local px,pz = math.floor(x),math.floor(z)
     local py = math.floor(spGetGroundHeight(px,pz))
 
-    local _,_,_,veh,bot,hvr,ship,_ = spGetGroundInfo(px,pz)
+    local _,_,_,veh,bot,hvr,ship,_ = spGetGroundInfo(px,pz)  --104fix
     vehCol = speedModCol(veh)
     botCol = speedModCol(bot)
     hvrCol = speedModCol(hvr)

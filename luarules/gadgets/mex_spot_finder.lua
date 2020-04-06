@@ -164,8 +164,9 @@ function IntegrateMetal(x, z, radius)
             local dist = sqrt(dx * dx + dz * dz)
             
             if (dist < radius) then
-                local _, metal = spGetGroundInfo(cx, cz)
-                result = result + metal
+                local _,_, metal = spGetGroundInfo(cx, cz)
+                result = 0 --104fix
+                --result = result + metal 
             end
         end
     end
@@ -314,7 +315,8 @@ function GetSpots()
         local stripWorth = 0
         
         for mx = metalmapStartZ, metalmapSizeX, gridSize do
-            local _, groundMetal = spGetGroundInfo(mx, mz)
+            local _,_, groundMetal = spGetGroundInfo(mx, mz)
+            groundMetal = 0 --104fix
             if groundMetal > 0 then
                 stripStart = stripStart or mx
                 stripWorth = stripWorth + groundMetal

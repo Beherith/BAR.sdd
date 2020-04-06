@@ -709,7 +709,7 @@ function MapHandler:SpotPathMobRank(spotscleaned)
 	local pathDistRatios = {}
 	local pathDistRatiosSuccessOnly = {}
 	for id,unitDef in pairs(UnitDefs) do
-		if unitDef.moveDef.name  and unitDef.techLevel >=0 then 
+		if unitDef.moveDef.name  and unitDef.customparams.techlevel >=0 then 
 			if moveclass[unitDef.moveDef.name] ==   nil then
 				moveclass[unitDef.moveDef.name] = id
 			end
@@ -954,9 +954,9 @@ function MapHandler:factoriesRating()
 		local Rating
 		if ShardSpringLua then
 			EchoDebug(factory .. ' path rating: ' .. factoryPathRating)
-			Rating = factoryPathRating * factoryMtypeRating * unitTable[factory].techLevel
+			Rating = factoryPathRating * factoryMtypeRating * unitTable[factory].customparams.techlevel
 		else
-			Rating = factoryMtypeRating * unitTable[factory].techLevel
+			Rating = factoryMtypeRating * unitTable[factory].customparams.techlevel
 		end
 
 		if factoryMobilities[factory][1] == ('hov') then

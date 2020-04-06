@@ -123,8 +123,9 @@ local function IntegrateMetal(mexDefInfo, x, z, forceUpdate)
             local dist = sqrt(dx * dx + dz * dz)
             
             if (dist < MEX_RADIUS) then
-                local _, metal = GetGroundInfo(cx, cz)
-                result = result + metal
+                local _, _, metal = GetGroundInfo(cx, cz)
+                result = 0 --104fix
+                --result = result + metal
             end
         end
     end

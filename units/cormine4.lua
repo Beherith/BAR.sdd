@@ -39,6 +39,7 @@ return {
 		sightdistance = 83.2,
 		stealth = true,
 		customparams = {
+			techlevel = 1,
 			faction = "core",
 		},
 		sounds = {

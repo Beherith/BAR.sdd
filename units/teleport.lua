@@ -31,6 +31,7 @@ return {
 		waterline = 0,
 		workertime = 0,
 		customparams = {
+			techlevel = 1,
 			faction = "none",
 		},
 		featuredefs = {},

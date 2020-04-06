@@ -86,6 +86,7 @@ return {
 				soundstart = "bombrel",
 				weapontype = "AircraftBomb",
 				customparams = {
+			techlevel = 2,
 					lups_shockwave = "1",
 				},
 				damage = {

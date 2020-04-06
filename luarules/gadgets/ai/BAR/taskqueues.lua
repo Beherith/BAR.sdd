@@ -71,7 +71,7 @@ end
 
 function GetMtypedLv(unitName)
 	local mtype = unitTable[unitName].mtype
-	local level = unitTable[unitName].techLevel
+	local level = unitTable[unitName].customparams.techlevel
 	local mtypedLv = mtype .. tostring(level)
 	local counter = ai.mtypeLvCount[mtypedLv] or 0
 	EchoDebug('mtypedLvmtype ' .. mtype .. ' '.. level .. ' ' .. counter)

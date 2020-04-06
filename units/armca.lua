@@ -74,6 +74,7 @@ return {
 			[31] = "armsy",
 		},
 		customparams = {
+			techlevel = 1,
 			faction = "arm",
 			normalmaps = "yes",
 			normaltex = "unittextures/Arm_normals.dds",

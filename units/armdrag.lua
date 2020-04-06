@@ -49,6 +49,7 @@ return {
 				shadtrans = 1,
 				world = "greenworld",
 				customparams = {
+			techlevel = 1,
 					faction = "arm",
 				},
 			},

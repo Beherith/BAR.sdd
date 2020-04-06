@@ -62,6 +62,7 @@ return {
 			},
 			heap = {
 				customparams = {
+			techlevel = 1,
 					faction = "chicken",
 				},
 			},

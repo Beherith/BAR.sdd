@@ -35,6 +35,7 @@ return {
 		turnrate = 297,
 		upright = true,
 		customparams = {
+			techlevel = 2,
 			faction = "core",
 			normalmaps = "yes",
 			normaltex = "unittextures/Core_normal.dds",

@@ -60,7 +60,7 @@ function DefendHandler:AddWard(behaviour, turtle)
 		if behaviour.id == nil then behaviour.id = behaviour.unit:Internal():ID() end
 		local un = behaviour.name
 		local utable = unitTable[un]
-		priority.air = utable.techLevel * techLevelPriority
+		priority.air = utable.customparams.techlevel * techLevelPriority
 		if commanderList[un] then priority.air = commanderPriority end
 		local mtype = behaviour.mtype
 		if mtype == "air" then

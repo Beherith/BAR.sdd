@@ -274,7 +274,7 @@ function TaskQueueBehaviour:GetHelp(value, position)
 			return value
 		else
 			EchoDebug("help for factory that need help")
-			local hashelp = ai.assisthandler:Summon(builder, position, unitTable[value].techLevel)
+			local hashelp = ai.assisthandler:Summon(builder, position, unitTable[value].customparams.techlevel)
 			if hashelp then
 				ai.assisthandler:Magnetize(builder, position)
 				ai.assisthandler:TakeUpSlack(builder)
@@ -508,13 +508,13 @@ function TaskQueueBehaviour:GetQueue()
 	self.outmodedTechLevel = false
 	local uT = unitTable
 	if outmodedTaskqueues[self.name] ~= nil and not q then 
-		local threshold =  1 - (uT[self.name].techLevel / ai.maxFactoryLevel)
+		local threshold =  1 - (uT[self.name].customparams.techlevel / ai.maxFactoryLevel)
 		if self.isFactory  and (ai.Metal.full < threshold or ai.Energy.full < threshold) then
 			local mtype = factoryMobilities[self.name][1]
 			for level, factories in pairs (ai.factoriesAtLevel)  do
 				for index, factory in pairs(factories) do
 					local factoryName = factory.unit:Internal():Name()
-					if mtype == factoryMobilities[factoryName][1] and uT[self.name].techLevel < level then
+					if mtype == factoryMobilities[factoryName][1] and uT[self.name].customparams.techlevel < level then
 						EchoDebug( self.name .. ' have major factory ' .. factoryName)
 						-- stop buidling lvl1 attackers if we have a lvl2, unless we're with proportioned resources
 						q = outmodedTaskqueues[self.name]

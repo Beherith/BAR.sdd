@@ -87,6 +87,7 @@ return {
 				sprayangle = 300,
 				weapontype = "AircraftBomb",
 				customparams = {
+			techlevel = 1,
 					lups_shockwave = "1",
 				},
 				damage = {

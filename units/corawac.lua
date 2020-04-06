@@ -33,6 +33,7 @@ return {
 		sonardistance = 1200,
 		turnrate = 402,
 		customparams = {
+			techlevel = 2,
 			faction = "core",
 			normalmaps = "yes",
 			normaltex = "unittextures/Core_normal.dds",

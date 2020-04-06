@@ -27,6 +27,7 @@ return {
 		waterline = 0,
 		yardmap = "wwwwwwwww",
 		customparams = {
+			techlevel = 1,
 			faction = "arm",
 			normalmaps = "yes",
 			normaltex = "unittextures/Arm_normals.dds",

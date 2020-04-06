@@ -22,11 +22,11 @@ local STARTUP_FILENAME = LUAUI_DIRNAME .. 'barmain.lua'
 
 do
   -- use a versionned directory name if it exists
-  local sansslash = string.sub(LUAUI_DIRNAME, 1, -2)
-  local versiondir = sansslash .. '-' .. Game.version .. '/'
-  if (VFS.FileExists(versiondir  .. 'barmain.lua', VFS.ZIP)) then
-    LUAUI_DIRNAME = versiondir
-  end
+  --local sansslash = string.sub(LUAUI_DIRNAME, 1, -2)
+  --local versiondir = sansslash .. '-' .. ((Game and Game.version) or "Game_version_error") .. '/' --104fix
+  --if (VFS.FileExists(versiondir  .. 'barmain.lua', VFS.ZIP)) then
+  --  LUAUI_DIRNAME = versiondir
+  --end
 end
 
 Spring.Echo('Using LUAUI_DIRNAME = ' .. LUAUI_DIRNAME)

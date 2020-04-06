@@ -22,7 +22,7 @@ function AttackerBehaviour:Init()
 	self.mtype = mtype
 	self.name = self.unit:Internal():Name()
 	local ut = unitTable[self.name]
-	self.level = ut.techLevel - 1
+	self.level = ut.customparams.techlevel - 1
 	if self.level == 0 then self.level = 0.5 elseif self.level < 0 then self.level = 0.25 end
 	self.size = math.max(ut.xsize, ut.zsize) * 8
 	self.congSize = self.size * 0.67 -- how much distance between it and other attackers when congregating

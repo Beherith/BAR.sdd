@@ -41,6 +41,7 @@ return {
 		waterline = 17,
 		workertime = 450,
 		customparams = {
+			techlevel = 1,
 			faction = "arm",
 			normalmaps = "yes",
 			normaltex = "unittextures/Arm_normals.dds",

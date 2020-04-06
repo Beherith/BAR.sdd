@@ -28,6 +28,7 @@ return {
 		waterline = 0,
 		yardmap = "wwww",
 		customparams = {
+			techlevel = 1,
 			faction = "arm",
 		},
 	},

@@ -33,16 +33,16 @@ function Warning()
     local reportedMajorVersion, reportedMinorVersion
     local devEngine
     --Spring.Echo(Game.version)
-    if string.find(Game.version,".",1,true) then 
-        local n = string.find(Game.version,".",1,true)
-        reportedMajorVersion = string.sub(Game.version,1,n-1)   
-        local m = string.find(Game.version,"-",1,true)
-        local m2 = string.find(Game.version,"-",m+1,true)
-        reportedMinorVersion = string.sub(Game.version,m+1,m2-1)
+    if string.find((Game and Game.version),".",1,true) then 
+        local n = string.find((Game and Game.version),".",1,true)
+        reportedMajorVersion = string.sub((Game and Game.version),1,n-1)   
+        local m = string.find((Game and Game.version),"-",1,true)
+        local m2 = string.find((Game and Game.version),"-",m+1,true)
+        reportedMinorVersion = string.sub((Game and Game.version),m+1,m2-1)
         devEngine = true
     else 
-        local n = string.len(Game.version)
-        reportedMajorVersion = string.sub(Game.version,1,n)  
+        local n = string.len((Game and Game.version))
+        reportedMajorVersion = string.sub((Game and Game.version),1,n)  
         devEngine = false
     end
     --Spring.Echo(reportedMajorVersion, reportedMinorVersion, devEngine)
@@ -57,10 +57,10 @@ function Warning()
         or (devEngine and reportedMajorVersion<minMajorEngineVersion) 
         or (devEngine and reportedMajorVersion==minMajorEngineVersion and reportedMinorVersion<minMinorEngineVersion) 
     then
-        Spring.Echo(red .. "WARNING: You are using Spring " .. Game.version .. ", which is too old for this game.")
+        Spring.Echo(red .. "WARNING: You are using Spring " .. (Game and Game.version) .. ", which is too old for this game.")
         Spring.Echo(red .. "Please update your engine to  " .. wantedEngineVersions)
     elseif reportedMajorVersion>maxEngineVersion then
-        Spring.Echo(red .. "WARNING: You are using Spring " .. Game.version .. " which is too recent for this game.")
+        Spring.Echo(red .. "WARNING: You are using Spring " .. (Game and Game.version) .. " which is too recent for this game.")
         Spring.Echo(red .. "Please downgrade your engine to Spring " .. wantedEngineVersions)
     end           
 end

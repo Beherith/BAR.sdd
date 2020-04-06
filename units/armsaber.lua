@@ -35,6 +35,7 @@ return {
 		turninplaceanglelimit = 360,
 		turnrate = 931,
 		customparams = {
+			techlevel = 1,
 			faction = "arm",
 			normalmaps = "yes",
 			normaltex = "unittextures/Arm_normals.dds",

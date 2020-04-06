@@ -69,7 +69,7 @@ local function GetUnitSide(unitDefID, builtBy)
 	while builtBy[defID] and #builtBy[defID] > 0 do
 		-- Spring.Echo(UnitDefs[defID].name)
 		for i, parentDefID in pairs(builtBy[defID]) do
-			if UnitDefs[parentDefID].techLevel < UnitDefs[defID].techLevel then
+			if UnitDefs[parentDefID].customparams and UnitDefs[parentDefID].customparams.techlevel < UnitDefs[defID].customparams.techlevel then --104fix
 				defID = parentDefID
 			end
 			if commanderSide[UnitDefs[parentDefID].name] then
@@ -125,7 +125,11 @@ local function GetUnitTable()
 		else
 			utable.needsWater = false
 		end
-		utable.techLevel = unitDef["techLevel"]
+    if unitDef.customparams then
+      utable.techLevel = unitDef.customparams.techlevel
+    else
+      utable.techLevel = 1
+    end
 		if hoverplatform[unitDef["name"]] then
 			utable.techLevel = utable.techLevel - 0.5
 		end

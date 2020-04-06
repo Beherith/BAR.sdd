@@ -137,6 +137,7 @@ return {
 				weapontype = "Cannon",
 				weaponvelocity = 500,
 				customparams = {
+			techlevel = 1,
 					lups_shockwave = "1",
 				},
 				damage = {

@@ -35,6 +35,7 @@ return {
 		turninplaceanglelimit = 360,
 		turnrate = 828,
 		customparams = {
+			techlevel = 1,
 			faction = "core",
 			normalmaps = "yes",
 			normaltex = "unittextures/Core_normal.dds",

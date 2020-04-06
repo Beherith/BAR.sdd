@@ -210,6 +210,7 @@ return {
 				weapontype = "DGun",
 				weaponvelocity = 300,
 				customparams = {
+			techlevel = 2,
 					lups_shockwave = "1",
 				},
 				damage = {

@@ -26,7 +26,7 @@ function CountBehaviour:Init()
 			self.isCon = true
 		elseif uTn.isWeapon then
 			self.isCombat = true
-			self.mtypedLv = tostring(uTn.mtype)..uTn.techLevel
+			self.mtypedLv = tostring(uTn.mtype)..uTn.customparams.techlevel
 			self.mobileMtyped = uTn.mtype
 		end
 	end

@@ -1482,7 +1482,7 @@ local skipUnitCommands = {
     [CMD.ATTACK] = true,
     [CMD.MOVE] = true,
     [CMD.PATROL] = true,
-    [CMD.SET_WANTED_MAX_SPEED] = true,
+    --[CMD.SET_WANTED_MAX_SPEED] = true, --104fix
     [CMD.FIGHT] = true,
 }
 function widget:UnitCommand(unitID, unitDefID, teamID, cmdID, cmdParams, cmdOptions)

@@ -953,7 +953,7 @@ end
 function GetSkill(playerID)
     if players[playerID].isAI then return "" end 
     
-    local customtable = select(10,Spring.GetPlayerInfo(playerID)) -- player custom table
+    local customtable = select(11,Spring.GetPlayerInfo(playerID)) -- player custom table
     local tsMu = customtable.skill
     local tsMuNumber = tsMu and tonumber(tsMu:match("%d+%.?%d*"))
     local tsSigma = customtable.skilluncertainty

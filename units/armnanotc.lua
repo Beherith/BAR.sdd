@@ -36,6 +36,7 @@ return {
 		upright = true,
 		workertime = 200,
 		customparams = {
+			techlevel = 1,
 			faction = "arm",
 			normalmaps = "yes",
 			normaltex = "unittextures/Arm_normals.dds",

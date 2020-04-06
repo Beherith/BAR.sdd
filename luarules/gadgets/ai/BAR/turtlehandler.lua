@@ -55,7 +55,7 @@ local function Priority(unitName)
 		priority = 2
 	else
 		if ut.buildOptions then
-			priority = priority + factoryPriority + ut.techLevel
+			priority = priority + factoryPriority + ut.customparams.techlevel
 		end
 		if ut.extractsMetal > 0 then
 			priority = priority + (ut.extractsMetal * 1000)

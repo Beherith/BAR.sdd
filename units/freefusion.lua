@@ -46,6 +46,7 @@ return {
 				object = "freefusion_dead.s3o",
 				reclaimable = true,
 				customparams = {
+			techlevel = 2,
 					faction = "none",
 				},
 			},

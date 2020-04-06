@@ -85,7 +85,7 @@ function FactoryBuildersHandler:PrePositionFilter()
 		local factoryName = ai.factoriesRanking[rank]
 		local buildMe = true
 		local utn=unitTable[factoryName]
-		local level = utn.techLevel
+		local level = utn.customparams.techlevel
 		local isAdvanced = advFactories[factoryName]
 		local isExperimental = expFactories[factoryName] or leadsToExpFactories[factoryName]
 		local mtype = factoryMobilities[factoryName][1]

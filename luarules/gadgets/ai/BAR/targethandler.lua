@@ -89,7 +89,7 @@ local function Value(unitName)
 	if v then return v end
 	local utable = unitTable[unitName]
 	if not utable then return 0 end
-	local val = utable.metalCost + (utable.techLevel * techValue)
+	local val = utable.metalCost + (utable.customparams.techlevel * techValue)
 	if utable.buildOptions ~= nil then
 		if utable.isBuilding then
 			-- factory

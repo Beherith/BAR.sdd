@@ -41,7 +41,7 @@ function widget:Initialize()
     end
     
     --- do the same eligibility check as in game_replace_afk_players
-    local customtable = select(10,Spring.GetPlayerInfo(myPlayerID)) -- player custom table
+    local customtable = select(11,Spring.GetPlayerInfo(myPlayerID)) -- player custom table
     local tsMu = customtable.skill 
     local tsSigma = customtable.skilluncertainty
     ts = tsMu and tonumber(tsMu:match("%d+%.?%d*"))

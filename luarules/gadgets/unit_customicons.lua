@@ -159,12 +159,14 @@ function gadget:Initialize()
           end
         end
       else
-        if (ud.techLevel == 4) then
-          Spring.SetUnitDefIcon(udid, "sphere2.user")
-        elseif (ud.techLevel == 6) then
-          Spring.SetUnitDefIcon(udid, "sphere3.user")
-        else
-          Spring.SetUnitDefIcon(udid, "sphere.user")
+        if (ud.customparams) then
+          if (ud.customparams.techlevel == 4) then --104fix
+            Spring.SetUnitDefIcon(udid, "sphere2.user")
+          elseif (ud.customparams.techlevel == 6) then
+            Spring.SetUnitDefIcon(udid, "sphere3.user")
+          else
+            Spring.SetUnitDefIcon(udid, "sphere.user")
+          end
         end
       end
     end

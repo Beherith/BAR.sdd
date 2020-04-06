@@ -73,6 +73,7 @@ return {
 			[14] = "corfmkr",
 		},
 		customparams = {
+			techlevel = 2,
 			faction = "core",
 			normalmaps = "yes",
 			normaltex = "unittextures/Core_normal.dds",

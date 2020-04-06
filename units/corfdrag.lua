@@ -54,6 +54,7 @@ return {
 				reclaimable = true,
 				world = "allworld",
 				customparams = {
+			techlevel = 1,
 					faction = "core",
 				},
 			},

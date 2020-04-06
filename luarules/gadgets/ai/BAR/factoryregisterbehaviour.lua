@@ -20,7 +20,7 @@ function FactoryRegisterBehaviour:Init()
     	z2 = self.position.z + 40,
 	}
 	self.sides = factoryExitSides[self.name]
-    self.level = unitTable[self.name].techLevel
+    self.level = unitTable[self.name].customparams.techlevel
 
     self.ai.factoryUnderConstruction = self.id
 	EchoDebug('starting building of ' ..self.name)

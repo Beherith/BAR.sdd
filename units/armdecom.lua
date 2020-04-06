@@ -73,6 +73,7 @@ return {
 			[14] = "armfmkr",
 		},
 		customparams = {
+			techlevel = 2,
 			faction = "arm",
 			normalmaps = "yes",
 			normaltex = "unittextures/Arm_normals.dds",

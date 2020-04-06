@@ -33,6 +33,7 @@ return {
 		sightdistance = 455,
 		turnrate = 535,
 		customparams = {
+			techlevel = 1,
 			faction = "arm",
 			normalmaps = "yes",
 			normaltex = "unittextures/Arm_normals.dds",

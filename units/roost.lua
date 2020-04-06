@@ -40,6 +40,7 @@ return {
 		workertime = 1500,
 		yardmap = "ooooooooo",
 		customparams = {
+			techlevel = 1,
 			faction = "chicken",
 		},
 		featuredefs = {},

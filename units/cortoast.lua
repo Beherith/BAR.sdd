@@ -81,6 +81,7 @@ return {
 				resurrectable = 0,
 				world = "All Worlds",
 				customparams = {
+			techlevel = 2,
 					faction = "core",
 				},
 			},
